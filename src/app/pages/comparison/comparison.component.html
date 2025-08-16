@@ -8,7 +8,7 @@
   </header>
   <div class="container mt-[60px]">
     <div
-      class="compare-content br-up pb-6 mb-6 flex items-start justify-around gap-24"
+      class="compare-content br-up pb-6 mb-6 flex items-start justify-around gap-24 flex-wrap"
     >
       <div class="left-sec">
         <h2 class="font-medium">
@@ -18,26 +18,26 @@
         </h2>
         <button>View More</button>
       </div>
-      <div class="products-comparison flex items-center justify-center gap-7">
-        @for (item of productsComparison(); track item.Title) {
-        <div class="product flex flex-col gap-3 items-start">
-          <img
-            src="{{ item.img }}"
-            alt=""
-            class="p-3 bg-[#F9F1E7] items-center w-[240px] h-[143px] rounded-xl"
-          />
-          <h4>{{ item.Title }}</h4>
-          <p>{{ item.price }}</p>
-          <div class="flex items-center gap-2">
-            {{ item.rate }}
-            <app-rating-stars [rate]="item.rate"></app-rating-stars>
-            <img src="imgs/icons/Line-col.svg" alt="" />
+      <!-- <div class="products-comparison flex items-center justify-center gap-7"> -->
+      @for (item of productsComparison(); track item.Title) {
+      <div class="product flex flex-col gap-3 items-start">
+        <img
+          src="{{ item.img }}"
+          alt=""
+          class="p-3 bg-[#F9F1E7] items-center w-[240px] h-[143px] rounded-xl"
+        />
+        <h4>{{ item.Title }}</h4>
+        <p>{{ item.price }}</p>
+        <div class="flex items-center gap-2">
+          {{ item.rate }}
+          <app-rating-stars [rate]="item.rate"></app-rating-stars>
+          <img src="imgs/icons/Line-col.svg" alt="" />
 
-            <span class="text-[#9F9F9F]">{{ item.reviews }} Review</span>
-          </div>
+          <span class="text-[#9F9F9F]">{{ item.reviews }} Review</span>
         </div>
-        }
       </div>
+      }
+      <!-- </div> -->
       <div class="right-sec pt-5">
         <h2 class="font-semibold mb-2">Add Product</h2>
         <select
@@ -52,7 +52,6 @@
         </select>
       </div>
     </div>
-
     <div class="section general">
       <h2 class="">General</h2>
       <div class="info-data">
@@ -61,38 +60,40 @@
           <p>{{ key }}</p>
           }
         </div>
-        <div class="compare-content flex items-center gap-5">
-          @for (item of productsComparison(); track item.Title) {
-          <div class="col">
-            @for (key of objectKeys(item.general); track key) {
-            <p>{{ getValue(item.general, key) }}</p>
-            }
-          </div>
+        <!-- <div class="compare-content flex items-center gap-5"> -->
+        @for (item of productsComparison(); track item.Title) {
+        <div class="col">
+          @for (key of objectKeys(item.general); track key) {
+          <p>{{ getValue(item.general, key) }}</p>
           }
         </div>
+        }
+        <!-- </div> -->
+        <div></div>
       </div>
     </div>
     <div class="section product">
-      <h2 class="">Prodcut</h2>
+      <h2 class="">product</h2>
       <div class="info-data">
         <div class="main-col">
           @for (key of objectKeys(productsComparison()[0].product); track key) {
           <p>{{ key }}</p>
           }
         </div>
-        <div class="compare-content flex items-center gap-5">
-          @for (item of productsComparison(); track item.Title) {
-          <div class="col">
-            @for (key of objectKeys(item.product); track key) {
-            <p>{{ getValue(item.product, key) }}</p>
-            }
-          </div>
+        <!-- <div class="compare-content flex items-center gap-5"> -->
+        @for (item of productsComparison(); track item.Title) {
+        <div class="col">
+          @for (key of objectKeys(item.product); track key) {
+          <p>{{ getValue(item.product, key) }}</p>
           }
         </div>
+        }
+        <!-- </div> -->
+        <div></div>
       </div>
     </div>
     <div class="section dimensions">
-      <h2 class="">Dimensions</h2>
+      <h2 class="">dimensions</h2>
       <div class="info-data">
         <div class="main-col">
           @for (key of objectKeys(productsComparison()[0].dimensions); track
@@ -100,49 +101,38 @@
           <p>{{ key }}</p>
           }
         </div>
-        <div class="compare-content flex items-center gap-5">
-          @for (item of productsComparison(); track item.Title) {
-          <div class="col">
-            @for (key of objectKeys(item.dimensions); track key) {
-            <p>{{ getValue(item.dimensions, key) }}</p>
-            }
-          </div>
+        <!-- <div class="compare-content flex items-center gap-5"> -->
+        @for (item of productsComparison(); track item.Title) {
+        <div class="col">
+          @for (key of objectKeys(item.dimensions); track key) {
+          <p>{{ getValue(item.dimensions, key) }}</p>
           }
         </div>
+        }
+        <!-- </div> -->
+        <div></div>
       </div>
     </div>
-    <div class="section warranty mt-5">
-      <h2 class="">Warranty</h2>
-      <div
-        class="info-data"
-        style="display: flex; align-items: start; margin-top: 20px"
-      >
+    <div class="section warranty">
+      <h2 class="">warranty</h2>
+      <div class="info-data">
         <div class="main-col">
           @for (key of objectKeys(productsComparison()[0].warranty); track key)
           {
           <p>{{ key }}</p>
           }
         </div>
-        <div class="compare-content flex items-center gap-5">
-          @for (item of productsComparison(); track item.Title) {
-          <div class="col" style="width: fit-content">
-            @for (key of objectKeys(item.warranty); track key) {
-            <p>{{ getValue(item.warranty, key) }}</p>
-            }
-          </div>
+        <!-- <div class="compare-content flex items-center gap-5"> -->
+        @for (item of productsComparison(); track item.Title) {
+        <div class="col">
+          @for (key of objectKeys(item.warranty); track key) {
+          <p>{{ getValue(item.warranty, key) }}</p>
           }
         </div>
+        }
+        <!-- </div> -->
+        <div></div>
       </div>
-    </div>
-
-    <div class="buttons flex items-center justify-center gap-5">
-      @for (button of productsComparison(); track button.price) {
-      <button
-        class="bg-[#B88E2F] text-[#FFFFFF] w-[200px] h-[38px] font-bold cursor-pointer border border-[#B88E2F] border-solid"
-      >
-        Add to Cart
-      </button>
-      }
     </div>
   </div>
 </div>

@@ -164,8 +164,9 @@ export const productsComparison = signal([
     warranty: {
       Summary: '1 Year Manufacturing Warranty',
       ServiceType:
-        'For Warranty Claims or Any Product Related Issues, Please Email at support@domusfurniture.com',
-      CoveredInWarranty: 'Warranty Against Manufacturing Defect',
+        'For Warranty Claims or Any Product Related Issues Please Email at support@xyz.com',
+      CoveredInWarranty:
+        'Warranty of the product is limited to manufacturing defects only.',
       NotCoveredInWarranty:
         'The Warranty Does Not Cover Damages Due To Usage Of The Product Beyond Its Intended Use And Wear & Tear In The Natural Course Of Product Usage.',
       DomesticWarranty: '3 Months',

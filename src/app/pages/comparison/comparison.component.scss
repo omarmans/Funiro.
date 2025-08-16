@@ -8,52 +8,40 @@
     background: url("../../../../public/imgs/shop/background.png");
   }
   .container {
-    .left-sec {
-      button {
-        border: none;
-        font-size: 14px;
-        font-weight: 500;
-        background: transparent;
-        color: #727272;
-        border-bottom: 1px solid #727272;
-        padding-bottom: 10px;
-        cursor: pointer;
+    .compare-content {
+      div {
+        flex: 1;
       }
     }
     .section {
+      border-top: 1px solid red;
+      border-right: 1px solid red;
       h2 {
-        font-weight: 500;
-        // margin-bottom: 15px;
-        padding-bottom: 15px;
+        width: fit-content;
+        border-right: 1px solid red;
       }
+
+      div {
+        border-right: 1px solid red;
+      }
+      // flex: 1;
+      // border-right: 1px solid red;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: start
+      // justify-content: start;
       .info-data {
+        // border-right: 1px solid red;
         display: flex;
         align-items: center;
-        gap: 40px;
-        .main-col {
-          width: 450px;
-        }
-        .compare-content {
-          div {
-            width: 200px;
-          }
-        }
-        .main-col,
-        .compare-content div {
-          border-right: 1px solid #e8e8e8;
-          padding-left: 10px;
-          padding-right: 10px;
-
-          p {
-            // margin-top: 10px;
-            margin-bottom: 15px;
-          }
+        justify-content: space-around;
+        // flex-direction: column;
+        gap: 96px;
+        div {
+          flex: 1;
+          // border-right: 1px solid red;
         }
       }
     }
   }
-}
-
-.br-up {
-  border-bottom: 1px solid #e8e8e8;
 }
