@@ -1,0 +1,21 @@
+.browse {
+  .container {
+    .categorys {
+      .category {
+        transition: 0.5s;
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .categorys {
+    text-align: center;
+    img {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,117 @@
+<div class="shop bg-white">
+  <header>
+    <h2 class="font-medium text-[#000000]">Shop</h2>
+    <p class="font-medium">
+      <span class="cursor-pointer">Home ></span>
+      <span class="font-light cursor-pointer">shop</span>
+    </p>
+  </header>
+  <div class="actions-content bg-[#F9F1E7]">
+    <div class="container">
+      <div class="actions p-5 flex items-center justify-between">
+        <div class="left flex items-center gap-7">
+          <div class="filter flex items-center gap-2">
+            <img src="imgs/icons/filter.svg" alt="" />
+            <span>Filter</span>
+          </div>
+          <img src="imgs/icons/bigRound.svg" alt="" />
+          <img src="imgs/icons/list.svg" alt="" />
+          <img src="imgs/icons/Line-col.svg" alt="" class="mx-2" />
+
+          <p>Showing 1–16 of 32 results</p>
+        </div>
+        <div class="right flex items-center gap-7">
+          <div class="total flex items-center gap-3">
+            <span>Show</span>
+            <span class="block w-5 h-5 bg-white text-[#9F9F9F] p-3">16</span>
+          </div>
+          <div class="sort flex items-center gap-2">
+            <span>Short by</span>
+            <select
+              name="select"
+              id="select"
+              class="p-3 bg-white text-[#9F9F9F] border-none w-[120px] outline-none"
+            >
+              <option value="default">Default</option>
+              <option value="default">Time</option>
+              <option value="default">Day</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container">
+      <div
+        class="products flex items-center flex-wrap gap-5 justify-center p-5 bg-white mt-7"
+      >
+        <!-- @for (product of products(); track product.name) { -->
+        @for (product of products(); track product.name) {
+
+        <!-- <div
+          class="product flex flex-col bg-[#F4F5F7] rounded-lg relative"
+          [routerLink]="'/single-product'"
+        >
+          <img src="{{ product.img }}" alt="" class="relative" />
+          @if (product.isNew===true) {
+          <p class="p-2 bg-[#2EC1AC] absolute pop-up">New</p>
+          } @if (product.commission) {
+          <p class="p-2 bg-[#E97171] absolute pop-up">
+            -{{ product.commission }}%
+          </p>
+          }
+
+          <div class="details p-3">
+            <h2 class="mb-3 font-bold">{{ product.name }}</h2>
+            <p class="mb-3 text-[#898989]">{{ product.description }}</p>
+
+            @if (product.discountPrice) {
+            <div class="price flex items-start justify-between">
+              <span class="font-bold">Rp{{ product.discountPrice }}</span>
+              <span class="text-[#B0B0B0] line-through text-sm mb-1"
+                >Rp{{ product.mainPrice }}</span
+              >
+            </div>
+            }@else {
+            <span>
+              <span class="font-bold">Rp{{ product.mainPrice }}</span></span
+            >
+            }
+          </div>
+          <div class="more">
+            <button
+              class="text-[#B88E2F] bg-[#FFFFFF] w-[150px] h-[38px] border-none font-bold cursor-pointer"
+            >
+              Add to cart
+            </button>
+            <div
+              class="actions flex items-center justify-between text-white gap-5 cursor-pointer relative overflow-hidden"
+            >
+              <p class="share flex items-center justify-between gap-1">
+                <img src="imgs/icons/share.svg" alt="" />
+                <span>Share</span>
+              </p>
+              <p class="flex items-center justify-between gap-1">
+                <img src="imgs/icons/compare.svg" alt="" />
+                <span>Compare</span>
+              </p>
+              <p class="like flex items-center justify-between gap-1">
+                <img src="imgs/icons/fav.svg" alt="" />
+                <span>Like</span>
+              </p>
+            </div>
+          </div>
+        </div> -->
+        <app-product-card
+          [product]="product"
+          [routerLink]="'/single-product'"
+        />
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-pagination />
+<app-benefits />

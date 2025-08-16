@@ -1,0 +1,27 @@
+.dots {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+
+  div {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #d3d3d3; // رمادي
+
+    &.active {
+      background-color: #b88e2f; // قلب ذهبي
+      border: 2px solid #fff; // بوردر أبيض
+      box-shadow: 0 0 0 2px #b88e2f; // بوردر ذهبي خارجي
+      box-sizing: border-box;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .rooms-views,
+  .room-slide {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}

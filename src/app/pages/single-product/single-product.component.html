@@ -1,0 +1,172 @@
+<div class="product-details">
+  <div class="haeder bg-[#F9F1E7]">
+    <div class="container flex items-center mb-5 gap-7 py-5">
+      <span class="text-[#9F9F9F]">Home</span>><span class="text-[#9F9F9F]"
+        >Shop</span
+      >
+      <img src="imgs/icons/Line-col.svg" alt="" class="mx-2" />
+      <span>Asgaard sofa</span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="product flex items-start gap-[100px] border-bottom">
+      <div class="left-sec flex items-start gap-5">
+        <div class="small-pic flex items-center flex-col gap-2">
+          <img src="imgs/single-product/1.png" alt="" />
+          <img src="imgs/single-product/2.png" alt="" />
+          <img src="imgs/single-product/3.png" alt="" />
+          <img src="imgs/single-product/4.png" alt="" />
+        </div>
+        <div class="main-pic py-5 bg-[#F9F1E7] rounded-xl">
+          <img src="imgs/single-product/main.png" alt="" />
+        </div>
+      </div>
+      <div class="right-sec flex flex-col">
+        <h1 class="font-medium m-0 mb-1">Asgaard sofa</h1>
+        <p class="text-[#9F9F9F]">Rs. 250,000.00</p>
+
+        <div class="rate-content flex items-center gap-3 my-3">
+          <div class="rate flex items-center gap-1" style="font-size: 15px">
+            @for (star of fullStars; track $index) {
+            <i class="fa-solid fa-star" style="color: #ffc700"></i>
+            } @if (hasHalfStar) {
+            <i class="fa-solid fa-star-half-stroke" style="color: #ffc700"></i>
+            }
+          </div>
+          <img src="imgs/icons/Line-col.svg" alt="" class="mx-2 opacity-[.5]" />
+          <p class="text-[#9F9F9F]">{{ fullStars.length }} Customer Review</p>
+        </div>
+        <p>
+          Setting the bar as one of the loudest speakers in its class, the
+          <br />
+          Kilburn is a compact, stout-hearted hero with a well-balanced
+          <br />audio which boasts a clear midrange and extended highs for a
+          <br />
+          sound.
+        </p>
+
+        <div class="size-content my-3">
+          <h5 class="text-[#9F9F9F] my-3 font-medium">Size</h5>
+          <div class="sizes flex items-center gap-3">
+            <input type="radio" id="size-l" name="size" value="L" />
+            <label for="size-l">L</label>
+
+            <input type="radio" id="size-xl" name="size" value="XL" />
+            <label for="size-xl">XL</label>
+
+            <input type="radio" id="size-xs" name="size" value="XS" />
+            <label for="size-xs">XS</label>
+          </div>
+        </div>
+        <!-- لاحظ الفرق بين هندلة الالوان وهندلة الاحجام ياعمر -->
+
+        <div class="color-content">
+          <h5 class="text-[#9F9F9F] my-3 font-medium">Color</h5>
+          <div class="colors flex items-center gap-2">
+            <label class="bg-[#816DFA]">
+              <input type="radio" name="color" />
+            </label>
+
+            <label class="bg-[#000000]">
+              <input type="radio" name="color" />
+            </label>
+
+            <label class="bg-[#B88E2F]">
+              <input type="radio" name="color" />
+            </label>
+          </div>
+        </div>
+        <div
+          class="actions flex items-center gap-3 mt-3 pb-8 border-bottom flex-wrap"
+        >
+          <div
+            class="count flex items-center gap-5 rounded-lg border-solid border-[1px] border-[#9F9F9F] bg-white bb"
+          >
+            <button class="text-xl border-none bg-transparent">-</button>
+            <p>1</p>
+            <button class="text-xl border-none bg-transparent">+</button>
+          </div>
+
+          <button
+            class="text-xl rounded-lg border-solid border-[1px] border-[#9F9F9F] bg-white bb"
+          >
+            Add to Cart
+          </button>
+          <button
+            class="text-xl rounded-lg border-solid border-[1px] border-[#9F9F9F] bg-white bb"
+            routerLink="/comparison"
+          >
+            <span>+</span> Compare
+          </button>
+        </div>
+
+        <div class="product-meta flex gap-3 flex-col my-7">
+          <div class="meta-item flex items-center gap-2 text-[#9F9F9F]">
+            <span class="x w-24">SKU</span> :
+            <span>SS001</span>
+          </div>
+          <div class="meta-item flex items-center gap-2 text-[#9F9F9F]">
+            <span class="x w-24">Category</span> :
+            <span>Sofas</span>
+          </div>
+          <div class="meta-item flex items-center gap-2 text-[#9F9F9F]">
+            <span class="x w-24">Tags</span> :
+            <span>Sofa, Chair, Home, Shop</span>
+          </div>
+          <div class="meta-item flex items-center gap-2 text-[#9F9F9F]">
+            <span class="x w-24">SKU</span> :
+            <div class="social-icons flex items-center gap-3">
+              <img src="imgs/social-icons/face.svg" alt="" />
+              <img src="imgs/social-icons/linked-in.svg" alt="" />
+              <img src="imgs/social-icons/x.svg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="more mt-7 pb-7 border-bottom">
+      <nav class="flex items-center justify-center gap-5 mb-5">
+        <a
+          routerLink="description"
+          routerLinkActive="active-link"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="text-[#9F9F9F]"
+          >Description</a
+        >
+        <a
+          routerLink="info"
+          routerLinkActive="active-link"
+          class="text-[#9F9F9F]"
+          >Additional Information</a
+        >
+        <a
+          routerLink="reviews"
+          routerLinkActive="active-link"
+          class="text-[#9F9F9F]"
+          >Reviews [{{ fullStars.length }}]</a
+        >
+      </nav>
+      <div class="container">
+        <router-outlet />
+      </div>
+      <div class="related">
+        <app-dynamic-header [h1]="'Related Products'" />
+        <div class="products flex items-center flex-wrap gap-5 justify-center">
+          @for (related of visibleProducts; track $index) {
+          <app-product-card [product]="related" />
+          }
+        </div>
+        @if (relatedProducts.length<=4) {
+        <button
+          (click)="toggleShowMore()"
+          class="my-5 block m-auto text-[#B88E2F] bg-[#FFFFFF] w-[200px] h-[38px] font-bold cursor-pointer border border-[#B88E2F] border-solid"
+        >
+          <!-- Show More -->
+          {{ showButtonLabel }}
+        </button>
+        }
+      </div>
+    </div>
+  </div>
+</div>

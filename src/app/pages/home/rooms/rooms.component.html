@@ -1,0 +1,60 @@
+<div class="rooms bg-[#FCF8F3] h-fit p-7">
+  <div class="conatiner flex items-center justify-center gap-3 flex-wrap">
+    <div class="rooms-details">
+      <h1 class="font-bold text-4xl">
+        50+ Beautiful rooms <br />
+        inspiration
+      </h1>
+      <p class="text-[#616161] my-4">
+        Our designer already made a lot of beautiful <br />
+        prototipe of rooms that inspire you
+      </p>
+      <button
+        class="bg-[#B88E2F] text-[#FFFFFF] w-[150px] h-[38px] border-none font-bold cursor-pointer"
+      >
+        Explore More
+      </button>
+    </div>
+    <!-- ################### -->
+    <div class="rooms-views relative">
+      <!-- <img src="{{ rooms()[0].img }}" alt="" /> -->
+      <img [src]="rooms()[currentIndex()].img" alt="" />
+      <div class="product absolute bottom-5 left-5 flex items-end">
+        <div class="product-detail text-[#616161] bg-[#FFFFFF] w-fit p-7">
+          <p>
+            <!-- 0{{ rooms()[0].index }}  -->
+            0{{ rooms()[currentIndex()].index }}
+            <img src="imgs/icons/line.svg" alt="" />
+            <!-- {{ rooms()[0].name }} -->
+            {{ rooms()[currentIndex()].name }}
+          </p>
+          <h1 class="font-bold text-[black]">
+            <!-- {{ rooms()[0].p }} -->
+
+            {{ rooms()[currentIndex()].p }}
+          </h1>
+        </div>
+        <button
+          (click)="nextRoom()"
+          class="bg-[#B88E2F] w-[60px] h-[50px] flex items-center justify-center border-none cursor-pointer"
+        >
+          <img src="imgs/icons/forward.svg" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- ################### -->
+    <div class="room-slide relative flex flex-col items-start mb-9">
+      <img src="{{ rooms()[1].img }}" />
+      <button
+        class="cursor-pointer w-[60px] h-[60px] rounded-[50%] bg-white text-center block border-none absolute right-5 top-72"
+      >
+        <img src="imgs/icons/forward-btn.svg" alt="" class="" />
+      </button>
+      <div class="dots mt-5">
+        <div class="active"></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+</div>

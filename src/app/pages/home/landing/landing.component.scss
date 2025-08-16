@@ -1,0 +1,83 @@
+.landing {
+  background: url("../../../../../public/imgs/home/landingPage.png");
+  height: 91vh;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  .container {
+    .info {
+      top: 317px;
+      right: 20.5%;
+
+      padding-top: 52px;
+      width: 475px;
+      button {
+        transition: 0.5s;
+        &:hover {
+          background-color: white;
+          color: #b88e2f;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1670px) {
+  .landing {
+    height: 90vh;
+    .container {
+      .info {
+        right: 228px;
+        top: 283px;
+      }
+    }
+  }
+}
+@media (max-width: 1550px) {
+  .landing {
+    height: 90vh;
+    .container {
+      .info {
+        right: 5px;
+        top: 70px;
+      }
+    }
+  }
+}
+@media (max-width: 1260px) {
+  .landing {
+    height: 90vh;
+    .container {
+      .info {
+        left: 30px;
+        top: 70px;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .landing {
+    background-position: center;
+
+    overflow: hidden;
+    height: 60vh;
+
+    .container {
+      .info {
+        width: 100%;
+        left: 0;
+        top: -42px;
+        padding-bottom: 45px;
+        margin-top: 0;
+        h1 {
+          font-size: 20px;
+          line-height: 28px;
+        }
+        p {
+          width: 90%;
+          margin-top: 3px;
+        }
+      }
+    }
+  }
+}

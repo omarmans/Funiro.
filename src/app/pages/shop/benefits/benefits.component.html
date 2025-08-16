@@ -1,0 +1,18 @@
+<div class="benefits-content bg-[#FAF3EA]">
+  <div class="container">
+    <div
+      class="benefits flex items-center justify-between gap-4 p-20 flex-wrap"
+    >
+      @for (benefit of benefits(); track benefit.title) {
+
+      <div class="benfit flex items-center gap-3 justify-start">
+        <img src="{{ benefit.icon }}" alt="" />
+        <div class="benfit-srv">
+          <h2 class="font-semibold m-0">{{ benefit.title }}</h2>
+          <p class="text-[#898989] m-0">{{ benefit.subtitle }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</div>

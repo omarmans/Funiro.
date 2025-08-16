@@ -1,0 +1,35 @@
+@if (isShown) {
+<div class="over-lay" (click)="close()"></div>
+<div class="shopping-cart bg-white">
+  <div class="shopping-cart-content">
+    <div class="container">
+      <div class="header">
+        <h2>shopping-cart</h2>
+        <img
+          src="imgs/icons/close.png"
+          alt=""
+          class="w-[24px]"
+          (click)="close()"
+        />
+      </div>
+
+      <div class="shopping-products">
+        @for (product of shoppingProducts(); track product.name) {
+        <div class="product">
+          <img src="{{ product.img }}" alt="" class="w-16" />
+          <div class="product-name">
+            <h4>{{ product.name }}</h4>
+            <div class="price flex items-center gap-2">
+              <span>{{ product.amount }}</span
+              >X <span class="text-[#B88E2F]">{{ product.price }}</span>
+            </div>
+          </div>
+          <img src="imgs/icons/delete.svg" alt="" class="block" />
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>
+
+}

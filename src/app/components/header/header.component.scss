@@ -1,0 +1,84 @@
+header {
+  .container {
+    i {
+      display: none;
+    }
+    // ul {
+    //   li {
+    //     font-size: 24px;
+    //     a {
+    //       color: black;
+    //       transition: 0.5s;
+    //       &:hover {
+    //         color: #b88e2f;
+    //       }
+    //     }
+    //   }
+    // }
+    nav a {
+      // font-size: 1.125rem;
+      font-size: 24px;
+      color: black;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: #b88e2f;
+      }
+    }
+    .icons {
+      img {
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+//################CLASSES START################
+.links-cont {
+  a {
+    font-size: 24px;
+    color: black;
+  }
+}
+.cont {
+  display: none;
+}
+
+.icon-item {
+  background-color: #fff;
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+//################CLASSES END################
+// ######################################################################
+// ######################################################################
+// ######################################################################
+
+// ################MEDIA START################
+@media (max-width: 1025px) {
+  header {
+    .container {
+      .links,
+      .icons {
+        display: none;
+      }
+      i {
+        display: flex;
+      }
+    }
+  }
+  .cont {
+    display: flex;
+  }
+}
+// ################MEDIA END################

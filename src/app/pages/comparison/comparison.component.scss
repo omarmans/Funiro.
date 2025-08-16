@@ -1,0 +1,46 @@
+.comparison {
+  header {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: url("../../../../public/imgs/shop/background.png");
+  }
+  .container {
+    .left-sec {
+      button {
+        border: none;
+        font-size: 14px;
+        font-weight: 500;
+        background: transparent;
+        color: #727272;
+        border-bottom: 1px solid #727272;
+        padding-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+    .section {
+      h2 {
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+      .info-data {
+        .main-col,
+        .compare-content div {
+          border-right: 1px solid #e8e8e8;
+          padding-left: 15px;
+          padding-right: 15px;
+          p {
+            // margin-top: 10px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.br-up {
+  border-bottom: 1px solid #e8e8e8;
+}

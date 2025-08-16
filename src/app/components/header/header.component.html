@@ -1,0 +1,54 @@
+<header class="bg-[#FFFFFF]">
+  <div class="container py-5 flex items-center justify-between">
+    <div class="logo flex items-end" routerLink="/">
+      <img src="imgs/mainlogo.png" alt="Main Logo" class="cursor-pointer" />
+    </div>
+
+    @if (!showCart) {
+    <app-shopping-cart />
+    }
+    <nav class="desktop-nav hidden lg:flex items-center gap-12 font-medium">
+      <a routerLink="/">Home</a>
+      <a [routerLink]="'shop'">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="icons flex items-center justify-between gap-7">
+      <img src="imgs/icons/person.svg" alt="Person Icon" />
+      <img src="imgs/icons/search.svg" alt="Search Icon" />
+      <img src="imgs/icons/fav-black.svg" alt="Fav Icon" />
+      <img
+        src="imgs/icons/cart.svg"
+        alt="Cart Icon"
+        (click)="(showCart === true)"
+      />
+    </div>
+    <i
+      class="fa-solid fa-bars text-3xl cursor-pointer"
+      style="color: #b88e2f"
+      (click)="toggleNav()"
+    ></i>
+  </div>
+</header>
+
+@if(isShown()){
+<ng-container>
+  <div
+    class="cont flex flex-col items-center justify-center bg-[#B88E2F] text-white w-full py-4"
+  >
+    <nav class="links-cont flex justify-center items-center font-medium gap-4">
+      <a href="#" class="mobile-nav-link">Home</a>
+      <a href="#" class="mobile-nav-link">Shop</a>
+      <a href="#" class="mobile-nav-link">About</a>
+      <a href="#" class="mobile-nav-link">Contact</a>
+    </nav>
+
+    <div class="icons flex items-center justify-center gap-8 mt-4">
+      <img src="imgs/icons/person.svg" alt="" class="icon-item" />
+      <img src="imgs/icons/search.svg" alt="" class="icon-item" />
+      <img src="imgs/icons/fav.svg" alt="" class="icon-item" />
+      <img src="imgs/icons/cart.svg" alt="" class="icon-item" />
+    </div>
+  </div>
+</ng-container>
+}

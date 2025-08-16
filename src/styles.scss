@@ -1,0 +1,54 @@
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  font-family: "Poppins", "Montserrat", "Roboto", sans-serif;
+}
+
+/* styles.css */
+// body {
+//   font-family: "Montserrat", sans-serif;
+// }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  // padding-left: 15px;
+  // padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+select {
+  appearance: none; /* للمتصفحات الحديثة */
+  -webkit-appearance: none; /* Safari, Chrome */
+  -moz-appearance: none; /* Firefox */
+  background-image: none; /* إلغاء أي أيقونة خلفية */
+}
+
+.custom-select {
+  appearance: none;
+  /* يخفي السهم الافتراضي */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../public/imgs/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* مكان السهم */
+  background-size: 16px; /* حجم السهم */
+}
+.bb {
+  padding: 10px 30px;
+  //   font-weight: ;
+}
+.border-bottom {
+  border-bottom: 1px solid #d9d9d9;
+}

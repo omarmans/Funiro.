@@ -1,0 +1,22 @@
+<div class="browse bg-white mt-5">
+  <div class="container">
+    <app-dynamic-header
+      [h1]="'Browse The Range'"
+      p="'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+    />
+    <div
+      class="categorys flex flex-wrap items-center gap-8 justify-center cursor-pointer"
+    >
+      @for (category of categorys(); track category.name) {
+      <div class="category">
+        <img
+          src="{{ category.img }}"
+          alt="{{ category.name }}"
+          class="rounded-lg"
+        />
+        <h4 class="text-center mt-2">{{ category.name }}</h4>
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="products">
+  <div class="container">
+    <app-dynamic-header [h1]="'Our Products'" />
+    <div class="products flex items-center flex-wrap gap-5 justify-center">
+      @for (product of visibleProducts; track product.name) {
+
+      <app-product-card [product]="product" />
+      }
+    </div>
+    <button
+      (click)="toggleShowMore()"
+      class="my-5 block m-auto text-[#B88E2F] bg-[#FFFFFF] w-[200px] h-[38px] font-bold cursor-pointer border border-[#B88E2F] border-solid"
+    >
+      <!-- Show More -->
+      {{ showButtonLabel }}
+    </button>
+  </div>
+</div>
