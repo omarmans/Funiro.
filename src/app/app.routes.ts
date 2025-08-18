@@ -20,6 +20,12 @@ export const routes: Routes = [
       ),
     title: 'Shop',
   },
+  {
+    path: 'cart',
+    loadComponent: () =>
+      import('./pages/cart/cart.component').then((mod) => mod.CartComponent),
+    title: 'Shop',
+  },
   { path: '', component: HomeComponent, title: 'Home' },
   {
     path: 'single-product',

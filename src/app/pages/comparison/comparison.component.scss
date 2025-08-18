@@ -1,12 +1,4 @@
 .comparison {
-  header {
-    height: 30vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background: url("../../../../public/imgs/shop/background.png");
-  }
   .container {
     .compare-content {
       .left-sec {
@@ -61,6 +53,15 @@
           div {
             flex: 1;
           }
+        }
+      }
+      .buttons {
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+        gap: 96px;
+        button {
+          flex: 1;
         }
       }
     }

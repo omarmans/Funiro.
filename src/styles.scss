@@ -45,6 +45,18 @@ select {
   background-position: right 10px center; /* مكان السهم */
   background-size: 16px; /* حجم السهم */
 }
+
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* لإخفاء الأسهم في Firefox */
+.no-spinner[type="number"] {
+  -moz-appearance: textfield;
+}
+
 .bb {
   padding: 10px 30px;
   //   font-weight: ;

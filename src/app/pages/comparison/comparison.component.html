@@ -1,11 +1,5 @@
 <div class="comparison">
-  <header>
-    <h2 class="font-medium text-[#000000]">Product Comparison</h2>
-    <p class="font-medium">
-      <span class="cursor-pointer">Home ></span>
-      <span class="font-light cursor-pointer"> Comparison</span>
-    </p>
-  </header>
+  <app-title-page-routing page="Comparison" />
   <div class="container mt-[60px]">
     <div
       class="compare-content br-up pb-6 mb-6 flex items-start justify-around gap-24 flex-wrap"
@@ -156,13 +150,16 @@
           <div class="emp"></div>
         </div>
       </div>
-      <div class="buttons flex items-start justify-center gap-[150px]">
+      <!-- <div class="buttons flex items-start justify-center gap-[150px]"> -->
+      <div class="buttons">
+        <button></button>
         @for (button of productsComparison(); track button.price) {
         <button
           class="bg-[#B88E2F] text-[#FFFFFF] w-[150px] h-[38px] font-bold cursor-pointer border border-[#B88E2F] border-solid"
         >
           Add to Cart
         </button>
+        <button></button>
         }
       </div>
     </div>

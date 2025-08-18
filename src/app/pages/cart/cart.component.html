@@ -1,0 +1,89 @@
+<div class="cart-container">
+  <app-title-page-routing page="Cart" />
+  <div class="container mt-12">
+    <div class="cart-content flex items-start gap-5 h-[40vh]">
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse">
+          <!-- Header -->
+          <thead class="bg-[#F9F1E7] text-black">
+            <tr>
+              <th class="py-4 px-6 text-left">Product</th>
+              <th class="py-4 px-6 text-left">Price</th>
+              <th class="py-4 px-6 text-left">Quantity</th>
+              <th class="py-4 px-6 text-left">Subtotal</th>
+              <th class="py-4 px-6 text-center"></th>
+            </tr>
+          </thead>
+
+          <!-- Body -->
+          <tbody>
+            <tr class="border-b">
+              <!-- Product -->
+              <td class="py-6 px-6 flex items-center gap-4 flex-wrap">
+                <img
+                  src="imgs/comparison/AsgaardSofa.png"
+                  alt="Asgaard Sofa"
+                  class="w-20 h-20 object-cover rounded-lg bg-[#F9F1E7]"
+                />
+                <span class="text-[#9F9F9F]">Asgaard sofa</span>
+              </td>
+
+              <!-- Price -->
+              <td class="py-6 px-6 text-[#9F9F9F]">Rs. 250,000.00</td>
+
+              <!-- Quantity -->
+              <td class="py-6 px-6">
+                <input
+                  type="number"
+                  value="1"
+                  min="1"
+                  class="quantity w-10 h-10 no-spinner"
+                />
+              </td>
+
+              <!-- Subtotal -->
+              <td class="py-6 px-6">Rs. 250,000.00</td>
+
+              <!-- Remove -->
+              <td class="py-6 px-6">
+                <button class="bg-transparent border-none cursor-pointer w-fit">
+                  <img
+                    src="imgs/icons/basket.svg"
+                    alt="remove"
+                    class="w-6 h-6 inline-block"
+                  />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        class="total-price bg-[#F9F1E7] w-[400px] h-[60%] p-6 flex flex-col items-center"
+      >
+        <!-- Title -->
+        <h1 class="text-2xl font-semibold mb-6">Cart Totals</h1>
+
+        <!-- Prices -->
+        <div class="w-full flex flex-col gap-4 mb-6">
+          <p class="flex justify-between">
+            <span class="font-medium">Subtotal</span>
+            <span class="text-[#9F9F9F]">Rs. 250,000.00</span>
+          </p>
+          <p class="flex justify-between">
+            <span class="font-medium">Total</span>
+            <span class="text-[#B88E2F] font-semibold">Rs. 250,000.00</span>
+          </p>
+        </div>
+
+        <!-- Button -->
+        <button
+          class="border cursor-pointer border-black bg-transparent px-12 py-3 rounded-lg hover:bg-black hover:text-white transition"
+        >
+          Check Out
+        </button>
+      </div>
+    </div>
+    <app-benefits class="mt-6" />
+  </div>
+</div>
