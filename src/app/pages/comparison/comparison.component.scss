@@ -1,6 +1,9 @@
 .comparison {
   .container {
     .compare-content {
+      .products-sm {
+        display: none;
+      }
       .left-sec {
         button {
           border: none;
@@ -85,7 +88,10 @@
       align-items: center;
       gap: 20px;
       .product {
-        display: none;
+        // display: none;
+      }
+      .products-sm {
+        display: flex;
       }
       .right-sec {
         display: flex;

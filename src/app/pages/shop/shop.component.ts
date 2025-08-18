@@ -4,6 +4,7 @@ import { PaginationComponent } from '../../components/pagination/pagination.comp
 import { BenefitsComponent } from './benefits/benefits.component';
 import { RouterLink } from '@angular/router';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
+import { TitlePageRoutingComponent } from '../../components/title-page-routing/title-page-routing.component';
 
 @Component({
   selector: 'app-shop',
@@ -12,6 +13,7 @@ import { ProductCardComponent } from '../../components/product-card/product-card
     BenefitsComponent,
     RouterLink,
     ProductCardComponent,
+    TitlePageRoutingComponent,
   ],
   templateUrl: './shop.component.html',
   styleUrl: './shop.component.scss',

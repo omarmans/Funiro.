@@ -1,5 +1,8 @@
 <header>
-  <h2 class="text-[#000000] mb-3 font-bold">{{ page() }}</h2>
+  @if (page()!=='Shop') {
+  <img src="imgs/icons/MeubelHouse_Logos-05.svg " class="w-[70px]" alt="" />
+  }
+  <h2 class="text-[#000000] mb-3 font-bold mt-0">{{ page() }}</h2>
   <p class="font-medium">
     <span class="cursor-pointer font-bold">Home ></span>
     <span class="font-light cursor-pointer ml-1">{{ page() }}</span>
