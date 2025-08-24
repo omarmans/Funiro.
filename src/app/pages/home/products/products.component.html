@@ -4,7 +4,7 @@
     <div class="products flex items-center flex-wrap gap-5 justify-center">
       @for (product of visibleProducts; track product.name) {
 
-      <app-product-card [product]="product" />
+      <app-product-card [product]="product" routerLink="/single-product" />
       }
     </div>
     <button

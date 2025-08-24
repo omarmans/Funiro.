@@ -3,10 +3,11 @@ import { DynamicHeaderComponent } from '../../../components/dynamic-header/dynam
 
 import { ProductCardComponent } from '../../../components/product-card/product-card.component';
 import { products } from '../../../models/random.data';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-products',
-  imports: [DynamicHeaderComponent, ProductCardComponent],
+  imports: [DynamicHeaderComponent, ProductCardComponent, RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.scss',
 })
