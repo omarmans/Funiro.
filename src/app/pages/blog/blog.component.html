@@ -1,0 +1,77 @@
+<div class="blog">
+  <app-title-page-routing page="Blog" />
+  <div class="container">
+    <div class="blog-content mt-16 flex items-start justify-center px-[120px]">
+      <div class="articles-container">
+        @for (article of articles(); track article.header) {
+
+        <div class="article flex flex-col items-start gap-3 mb-10">
+          <img src="{{ article.img }}" alt="" />
+          <div class="info flex items-center gap-5 mt-2">
+            <p>
+              <img src="imgs/icons/writer.svg" alt="" />
+              <span>{{ article.writer }}</span>
+            </p>
+            <p>
+              <img src="imgs/icons/date.svg" alt="" />
+              <span>{{ article.date }}</span>
+            </p>
+            <p>
+              <img src="imgs/icons/type.svg" alt="" />
+              <span>{{ article.type }}</span>
+            </p>
+          </div>
+          <h1 class="font-medium my-3 w-[90%]">{{ article.header }}</h1>
+          <p class="sub text-[#9f9f9f] w-[70%] mb-3">{{ article.subject }}</p>
+          <button class="more">Read more</button>
+        </div>
+        }
+      </div>
+      <div class="side-bar">
+        <div class="search relative">
+          <input type="search" name="" id="" />
+          <img src="imgs/icons/search.svg" alt="" />
+        </div>
+        <div class="categories">
+          <h3 class="font-medium my-5">Categories</h3>
+          <ul>
+            <li>
+              <span> Crafts</span>
+              <span>3</span>
+            </li>
+            <li>
+              <span> Design</span>
+              <span>5</span>
+            </li>
+            <li>
+              <span> Handmade</span>
+              <span>9</span>
+            </li>
+            <li>
+              <span> Interior</span>
+              <span>7</span>
+            </li>
+            <li>
+              <span> Wood</span>
+              <span>8</span>
+            </li>
+          </ul>
+        </div>
+        <div class="posts-container">
+          <h3 class="font-medium my-5">Recent Posts</h3>
+          @for (post of posts(); track $index) {
+          <div class="post flex items-center gap-5 mb-4">
+            <img src="{{ post.img }}" alt="" />
+            <div>
+              <h4 class="font-medium text-xs mb-1">{{ post.header }}</h4>
+              <span class="text-[#9F9F9F] text-xs">{{ post.date }}</span>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-pagination />
+  <app-benefits />
+</div>

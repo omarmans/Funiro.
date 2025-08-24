@@ -1,0 +1,84 @@
+<div class="contact">
+  <app-title-page-routing page="Contact" />
+  <div class="container">
+    <app-dynamic-header
+      class=""
+      h1="Get In Touch With Us"
+      p="For More Information About Our Product & Services. Please Feel Free To Drop Us <br/> An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!"
+    />
+    <div class="cotact-content">
+      <div class="left-side">
+        <div class="left-side-row">
+          <img src="imgs/icons/address.svg" alt="" class="mb-10" />
+          <div class="header">
+            <h4>Address</h4>
+            <p class="">
+              236 5th SE Avenue, New
+              <br />
+              York NY10000, United
+              <!-- <br /> -->
+              States
+            </p>
+          </div>
+        </div>
+
+        <div class="left-side-row">
+          <img src="imgs/icons/phone.svg" alt="" />
+          <div class="header">
+            <h4>Address</h4>
+            <p>Mobile: +(84) 546-6789</p>
+            <p>Hotline: +(84) 456-6789</p>
+          </div>
+        </div>
+        <div class="left-side-row">
+          <img src="imgs/icons/time.svg" alt="" />
+          <div class="header">
+            <h4>Working Time</h4>
+            <p>
+              Monday-Friday: 9:00 -
+              <!-- <br /> -->
+              22:00
+            </p>
+            <p>
+              Saturday-Sunday: 9:00 -
+              <!-- <br /> -->
+              21:00
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <form action="">
+          <div class="form-input">
+            <label for="name">Your name</label>
+            <input type="text" placeholder="ABc" />
+          </div>
+          <div class="form-input">
+            <label for="name">Email address</label>
+            <input type="email" placeholder="ABc@def.com" />
+          </div>
+          <div class="form-input">
+            <label for="name">Subject</label>
+            <input type="text" placeholder="This is an optional" />
+          </div>
+          <div class="form-input">
+            <label for="name">Message</label>
+            <!-- <input type="text" /> -->
+            <textarea
+              name="msg"
+              id="msg"
+              rows="3"
+              placeholder="Hi! i`d like to ask about"
+            ></textarea>
+          </div>
+          <button
+            class="cursor-pointer rounded bg-[#B88E2F] text-[#FFFFFF] py-5 px-14 mt-7 outline-none border-none font-medium w-[250px]"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <app-benefits />
+</div>

@@ -1,0 +1,134 @@
+.checkout {
+  .container {
+    .checkout-content {
+      form {
+        .form-content {
+          .form-input {
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            margin-bottom: 10px;
+            width: 400px;
+            label {
+              margin-bottom: 20px;
+            }
+
+            input,
+            select {
+              border-radius: 10px;
+              padding: 20px;
+              border: 1px solid #9f9f9f;
+              width: 100%;
+
+              line-height: 1.5; //السر هنا
+              box-sizing: border-box; //السر هنا
+            }
+          }
+          .form-group {
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            gap: 10px;
+
+            .form-input {
+              width: 45%;
+              justify-content: space-between;
+            }
+          }
+        }
+      }
+      //   ##################################################################
+
+      .checkout-price {
+        width: 40%;
+        margin-top: 50px;
+        .price {
+          border-bottom: 1px solid #d9d9d9;
+          padding-bottom: 15px;
+          .price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+        }
+        .bank-transfers {
+          .bank-transfer {
+            margin-bottom: 15px;
+            .input {
+              input,
+              label {
+                cursor: pointer;
+              }
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              input[type="radio"] {
+                accent-color: #000; /* يخلي لون الراديو أسود */
+                // accent-color: red; /* يخلي لون الراديو أسود */
+                border: none; /* يشيل البوردر */
+                outline: none; /* يشيل الـ focus الافتراضي */
+              }
+            }
+            p {
+              //   width: 300px;
+              color: #9f9f9f;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .checkout {
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      .checkout-content {
+        // flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        form {
+          h2 {
+            align-self: center;
+          }
+        }
+        .checkout-price {
+          width: 90%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 450px) {
+  .checkout {
+    .container {
+      .checkout-content {
+        form {
+          .form-content {
+            .form-input {
+              max-width: 350px;
+              padding-left: 5px;
+            }
+            .form-group {
+              flex-direction: column;
+              align-items: stretch;
+              width: 350px;
+              .form-input {
+                width: 100% !important;
+                label {
+                  display: block;
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

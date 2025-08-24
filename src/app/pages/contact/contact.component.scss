@@ -1,0 +1,100 @@
+.contact {
+  .container {
+    .cotact-content {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      gap: 70px;
+      margin-top: 100px;
+      margin-bottom: 70px;
+      .left-side {
+        // display: flex !important;
+        .left-side-row {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          margin-bottom: 30px;
+          img {
+            align-self: start;
+          }
+
+          .header {
+            h4 {
+              margin-bottom: 5px;
+              //   font-weight: 500;
+            }
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .right-side {
+        form {
+          .form-input {
+            display: flex;
+            // align-items: ce;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+            width: 400px;
+            font-weight: 300;
+            input,
+            select,
+            textarea {
+              border-radius: 10px;
+              padding: 20px;
+              border: 1px solid #9f9f9f;
+              width: 100%;
+              resize: none;
+              line-height: 1.5; //السر هنا
+              box-sizing: border-box; //السر هنا
+              //   font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .contact {
+    .container {
+      .cotact-content {
+        padding-right: 8px;
+        gap: 30px;
+        flex-wrap: wrap;
+        .left-side {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+
+          .left-side-row {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            img {
+              //   margin-bottom: 20px;
+              margin: 0 !important;
+              align-self: center;
+            }
+            .header {
+              text-align: center;
+            }
+          }
+        }
+        .right-side {
+          order: -1;
+          form {
+            button {
+              display: block;
+              margin: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
